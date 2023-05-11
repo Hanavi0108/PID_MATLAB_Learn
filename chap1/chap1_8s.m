@@ -42,9 +42,13 @@ sys=[ u(1);
 %==============================================================
 function sys = mdlOutputs(t,x,u,kp,ki,kd,MTab)
 
-kp=1.5;
-ki=2.0;
-kd=0.05;
+% kp=1.5;
+% ki=2.0;
+% kd=0.05;
+
+kp=2.5;
+ki=0.020;
+kd=0.50;
 
 %sys=[kp,ki,kd]*x;
 sys=kp*x(1)+ki*x(2)+kd*x(3);

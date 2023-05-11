@@ -1,4 +1,4 @@
-function [u]=pidsimf(u1,u2)
+function [u]=chap1_7ctrl(u1,u2)
 persistent pidmat errori error_1
 t=u1;
 if t==0
@@ -12,6 +12,7 @@ kd=0.50;
 
 error=u2;
 errord=error-error_1;
+
 errori=errori+error;
 
 u=kp*error+kd*errord+ki*errori;
